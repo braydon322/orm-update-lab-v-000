@@ -11,6 +11,17 @@ class Student
     @id = id
   end
 
+  def self.all
+    sql = <<-SQL
+      SELECT *
+      FROM students
+    SQL
+
+    DB[:conn].execute(sql).map do |row|
+      self.new_from_db(row)
+    end
+  end
+
   def self.create(name, grade, id = nil)
     new_student = Student.new(name, grade)
     new_student.save
