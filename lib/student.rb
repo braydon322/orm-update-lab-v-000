@@ -14,7 +14,7 @@ class Student
   def self.create(name, grade, id = nil)
     new_student = Student.new(name, grade)
     new_student.update
-    binding.pry
+    # binding.pry
   end
 
   def save
