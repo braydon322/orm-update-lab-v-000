@@ -44,10 +44,6 @@ class Student
     DB[:conn].execute(sql)
   end
 
-
-  def self.create
-  end
-
   def new_from_db(row)
     new_student = self.new
     new_student.id = row[0]
