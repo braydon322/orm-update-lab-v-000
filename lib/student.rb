@@ -13,7 +13,7 @@ class Student
 
   def self.create(name, grade, id = nil)
     new_student = Student.new(name, grade)
-    self.update
+    update
   end
 
   def save
