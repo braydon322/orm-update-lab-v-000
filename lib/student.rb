@@ -10,7 +10,7 @@ class Student
     @id = id
   end
 
-  def create(name, grade, id = nil)
+  def self.create(name, grade, id = nil)
     new_student = Student.new(name, grade)
   end
 
