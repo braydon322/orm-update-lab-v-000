@@ -56,6 +56,8 @@ class Student
   end
 
   def update
+    sql = "UPDATE songs SET name = ?, album = ? WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.album, self.id)
   end
 
   # Remember, you can access your database connection anywhere in this class
