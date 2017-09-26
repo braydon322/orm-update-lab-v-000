@@ -13,7 +13,6 @@ class Student
 
   def self.create(name, grade, id = nil)
     new_student = Student.new(name, grade)
-    binding.pry
     new_student
   end
 
